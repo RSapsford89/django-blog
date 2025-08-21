@@ -87,6 +87,11 @@ WSGI_APPLICATION = 'server.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+#trusted origin request addresses
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*herokuapp.com"
+]
 
 
 # Password validation
