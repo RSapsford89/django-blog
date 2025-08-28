@@ -4,3 +4,4 @@ __pycache__/
 *.py[cod]
 local.py
 production.py
+blog/fixtures
