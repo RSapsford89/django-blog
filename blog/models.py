@@ -21,7 +21,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"The titlr of this post is {self.title}"
+        return f"The title of this post is {self.title}"
 
 
 class Comment(models.Model):
