@@ -1,6 +1,15 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from .models import About
 # Create your views here.
 
-def index(request): 
-    return HttpResponse("About test")
+def about_me(request):
+
+    about = About.objects.all().order_by('-updated_datetime').first()
+    # about = get_object_or_404(queryset)
+    
+    return render(
+        request,
+        "about/about.html",
+        {"about": about},
+    )

@@ -20,9 +20,9 @@ from hello_world import views as index_views
 from about import views as about_views
 
 urlpatterns = [
+    path('about/', include("about.urls"), name='about-urls'),
     path('admin/', admin.site.urls),
     path('hello/', index_views.index, name='helloWorld'),
-    path('summernote/', include('django_summernote.urls')),
-    path('about/', about_views.index, name='about'),
+    path('summernote/', include('django_summernote.urls')),    
     path('', include("blog.urls"), name='blog-urls')
 ]
