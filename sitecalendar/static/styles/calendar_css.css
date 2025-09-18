@@ -1,0 +1,23 @@
+body{
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calendar-table table{
+    width: 100%;
+    table-layout: fixed;
+}
+.calendar-table td, .calendar-table th {
+    width: 14.285%;
+    height: 50px;
+    color: brown;
+}
+.today{
+
+}
+.first-date{
+
+}
+.last-date{
+
+}

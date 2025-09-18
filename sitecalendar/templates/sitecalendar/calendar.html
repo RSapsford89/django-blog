@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block calendar_css %}
+<link rel="stylesheet" href="{% static 'styles/calendar_css.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="container">
-	<h2>Calendar for {{ month }}/{{ year }}</h2>
+    <h2>Calendar for {{ month }}/{{ year }}</h2>
     <h3>Todays date is {{today}}</h3>
-	<div class="calendar-table">
-		{{ month_calendar|safe }}
-	</div>
-	<div>
-		<a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'-1' %}">Previous Month</a> |
-		<a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'1' %}">Next Month</a>
-	</div>
+    <div class="calendar-table">
+        {{ month_calendar|safe }}
+    </div>
+    <div>
+        <a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'-1' %}">Previous Month</a> |
+        <a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'1' %}">Next Month</a>
+    </div>
 </div>
 {% endblock %}
