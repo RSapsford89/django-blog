@@ -4,15 +4,16 @@
 {% load static %}
 <div class="container mt-5">
     <div class="row">
+        {% for bass in bass_list %}
         <div class="col-4 text-center">
             <img src="{% static 'images/nobody.jpg' %}" width="75%">
         </div>
         <div class="col-8">
             <!-- Title goes between these h2 tags -->
-			<h2>{{bass.model}}</h2>
+            <h2>{{bass.model}}</h2>
             <h2>{{bass.strings}}</h2>
             <!-- Content goes directly underneath this -->
-             <p>{{bass.blurb | safe}}</p>
+            <p>{{bass.blurb | safe}}</p>
         </div>
     </div>
     <div class="row">
@@ -20,6 +21,7 @@
             <!-- Updated on field goes in here -->
             <p class="text-end"><em>Updated on: </em> {{bass.dateTime}}</p>
         </div>
-      </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock content %}

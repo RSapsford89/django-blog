@@ -25,5 +25,6 @@ urlpatterns = [
     path('bass/', include("bass.urls"), name="bass"),
     path('hello/', index_views.index, name='helloWorld'),
     path('summernote/', include('django_summernote.urls')),    
+    path('calendar/', include('sitecalendar.urls'), name='sitecalendar'),
     path('', include("blog.urls"), name='blog-urls')
 ]

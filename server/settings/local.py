@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'blog',
     'about',
     'bass',
+    'sitecalendar',
 ]
 
 MIDDLEWARE = [

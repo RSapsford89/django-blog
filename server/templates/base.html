@@ -2,7 +2,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'bass' as bass_url %}
-
+{% url 'sitecalendar' as calendar_url %}
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -54,6 +54,13 @@
                         aria-current="page"
                         href="{% url 'bass' %}"
                         >Bass</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link
+                        {% if request.path == calendar_url %} active {%endif%}"
+                        aria-current="page"
+                        href="{% url 'sitecalendar' %}"
+                        >Calendar</a>
                     </li>
 
                 </ul>
