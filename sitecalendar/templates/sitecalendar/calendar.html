@@ -11,6 +11,9 @@
     <div class="calendar-table">
         {{ month_calendar|safe }}
     </div>
+	<div>
+		<h1>Number of month: {{day_num}}</h1>
+	</div>
     <div>
         <a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'-1' %}">Previous Month</a> |
         <a href="{% url 'monthly_calendar_by_date' year=year month=month|add:'1' %}">Next Month</a>
